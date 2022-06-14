@@ -1,9 +1,21 @@
+@font-face {
+    font-family: 'F37 Ginger';
+    src: url('files/F37Ginger.woff2') format('woff2'),
+        url('files/F37Ginger.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
     min-height: 200vh;
     background-color: rgb(32, 33, 36);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    font-family: 'F37 Ginger';
+    font-weight: normal;
+    font-style: normal;
     color: white;   
 }
+
 h1 {
     font-size: 70px;
 }
@@ -35,11 +47,11 @@ p {
     position: absolute;
     top: 70%;
     left: 47%;
-
+    animation: bounce 1.5s ease infinite;
 }
 
 .arrow:hover{
-    animation: bounce 1.5s ease infinite;
+    animation: none;
 }
 
 @keyframes bounce {
