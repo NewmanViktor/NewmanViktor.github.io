@@ -139,9 +139,14 @@ nav li {
 }
 
 nav a {
-	color: white;
+	color: rgb(150, 150, 150);
 	text-decoration: none;
 	font-size: 30px;
+    transition: color ease-in-out 0.5s;
+}
+
+nav a:hover{
+    color: white;
 }
 
 nav a::before {
@@ -153,7 +158,7 @@ nav a::before {
 	background-color: white;
 	position: absolute;
 	top: 30px;
-	transition: all ease-in-out 400ms;
+	transition: all ease-in-out 0.5s;
 }
 
 nav a:hover::before {
