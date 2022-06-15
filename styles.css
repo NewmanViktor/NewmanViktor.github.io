@@ -40,7 +40,7 @@ p {
 
 .arrow {
     font-size: 70px;
-    color: white;
+    color: rgb(150, 150, 150);
     text-decoration: none;
     text-align: center;
     width: 100px;
@@ -48,9 +48,11 @@ p {
     top: 70%;
     left: 47%;
     animation: bounce 1.5s ease infinite;
+    transition: color ease-in-out 0.5s;
 }
 
 .arrow:hover{
+    color: white;
     animation: none;
 }
 
