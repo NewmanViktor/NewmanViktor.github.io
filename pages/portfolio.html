@@ -5,11 +5,17 @@
         <link rel="icon" href="../icons/android-chrome-512x512.png">
         <link rel="stylesheet" href="../styles.css">
         <style>
+            body{
+                padding-bottom: 1vh;
+            }
             nav li{
                 padding-top: 27px;
             }
             nav a::before{
                 top: 15px;
+            }
+            p{
+                font-size: clamp(0.5vw, 1.7vw, 10vw);
             }
         </style>
     </head>
@@ -34,5 +40,61 @@
                 <h1>My Portfolio.</h1>
             </div>
         </center>
+        <p style="text-align: left; margin-left: 10%; margin-right: 10%; display:inline-flexbox;">
+            <b style="font-size:50px;">Spatial Mapping Using Time-of-Flight</b><br><br>The Spatial Mapping Using Time-of-Flight project is an integrated spatial
+            scanning system designed to visually re-map an enclosed space using LIDAR Sensor technology.
+            The system is comprised of a TI Microcontroller, stepper motor, ToF Sensor, and a cardboard body. 
+            The ToF sensor emits a laser of infrared light, measuring the time it takes for the pulse of
+            light to reflect to the sensor. Using the time measurement, the sensor calculates the distance data
+            and transmits it to the MCU using the I2C communication protocol. The product records 32
+            distance measurement readings approximately every 11.25° on a circulating 360° axis around the
+            y-z plane. Once the data is transmitted from the MCU to a connected PC using UART
+            communication protocol, each measurement is converted into (x,y,z) coordinates in a Python script. A model of the space is then drawn using the Open3D Python
+            Library.
+        </p>
+        <br><br><br>
+        <img src="../pictures/SpatialBox.jpg" style="float: left; margin-left: 10%; margin-right: 2%; width: 35%; border: 5px solid white;;border-radius: 30px;">
+        <p style="text-align: right; margin-right: 10%; margin-left: 10%; display:inline-flexbox;">
+            To measure the distance of objects or surfaces around the device, the VL53L1X ToF
+            Sensor takes samples of measurements every 11.25° of the stepper motor's full rotation. This
+            allows the sensor to collect a total of 32 distance measurements throughout the full 360° plane
+            revolving around the x-axis. The sensor emits pulses of 940nm wavelength infrared light which
+            is then reflected off neighboring surfaces back to the detector. The sensor then calculates the
+            distance by measuring the time it takes for the laser's full trip. The distance data is then transmitted to the
+            microcontroller using the I<sup>2</sup>C serial synchronous communication protocol. 
+        </p>
+        <br><br><br>
+        <img src="../pictures/output.png" style="float: right; margin-right: 10%; margin-left: 1%; margin-bottom: 1%; width: 20%; border-radius: 30px;">
+        <p style="text-align: left; margin-right: 10%; margin-left: 10%; display:inline-flexbox;">
+            Once the data collection process is complete, the data points must be mapped in 3D
+            for visualization of the surrounding area. When the microcontroller's program
+            finishes its data collection state, the Python script continues to compile the data and write it into
+            a .xyz file. This file is then read by the Open3D python
+            library and put into the pcd. The data collection Python script needs to be run using Python 3.9 or
+            earlier due to the Open3D library's lack of support for newer versions. The LineSet() function is
+            then called to map the lines to 3D coordinate vertices collected by the program. Depending on
+            the number of scans chosen by the user, the number of coordinates in the x-direction varies. The
+            draw_geometries() function is then used on the lineset and the visualization appears which can
+            be used for observation and/or manipulation by the user.
+        </p>
+        <br><br>
+        <p style="text-align: center; margin-left: 10%; margin-right: 10%; display:inline-flexbox;">
+            <b style="font-size:50px;">CAD Portfolio</b>
+        </p>
+        <p style="text-align: left; margin-left: 10%; margin-right: 10%; display:inline-flexbox;">
+            Throughout my professional career, I've developed a strong skillset for computer-aided design. I have a ton of experience using a variety of tools such as
+            AutoCAD, SOLIDWORKS, Autodesk Inventor, Altium Designer, etc. 
+        </p><br><br>
+        <p style="text-align: left; margin-left: 10%; margin-right: 10%; display:inline-flexbox;">
+            <b style="font-size:50px;">AC Tesla</b><br><br>
+            My time at AC Tesla allowed me to fully develop a second-nature for Electrical Schematic Design.
+            I drew 120+ Single Line Diagrams, 3D Models of Connection Boxes, Switchgear, Buses, and many more custom modifications for clients.<br>A few that can be shown are below.
+        </p><br><br>
+        <embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://newmanviktor.github.io/pictures/FullSWGR.pdf" width="500" height="375">
+        <p style="text-align: left; margin-left: 10%; margin-right: 10%; display:inline-flexbox;">
+            <b style="font-size:50px;">Irpinia Kitchens</b><br><br>
+            Irpinia Kitchens was a big step in my CAD Career, learning SOLIDWORKS from scratch. Having access to such intricate and interesting assemblies of kitchens, I was able
+            to put my newly learnt skill to use. <br>A few that can be shown are below.
+        </p>
     </body>
 </html>
