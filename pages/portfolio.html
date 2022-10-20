@@ -5,7 +5,10 @@
         <link rel="icon" href="../icons/android-chrome-512x512.png">
         <link rel="stylesheet" href="../styles.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="myscripts.js"></script>
+        <script src="../myscripts.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preload" href="F37Ginger.woff2" as="font" type="font/woff2" crossorigin>
+        <meta charset="UTF-8">
         <style>
             body{
                 padding-bottom: 10vh;
@@ -45,7 +48,7 @@
             The system is comprised of a TI Microcontroller, stepper motor, ToF Sensor, and a cardboard body. 
             The ToF sensor emits a laser of infrared light, measuring the time it takes for the pulse of
             light to reflect to the sensor. Using the time measurement, the sensor calculates the distance data
-            and transmits it to the MCU using the I2C communication protocol. The product records 32
+            and transmits it to the MCU using the I<sup>2</sup>C communication protocol. The product records 32
             distance measurement readings approximately every 11.25° on a circulating 360° axis around the
             y-z plane. Once the data is transmitted from the MCU to a connected PC using UART
             communication protocol, each measurement is converted into (x,y,z) coordinates in a Python script. A model of the space is then drawn using the Open3D Python
@@ -102,11 +105,17 @@
             to put my newly learnt skill to use. <br>A few that can be shown are below.
         </p>
         <center>
-            <embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://newmanviktor.github.io/files/cab.pdf" width="600" height="400">
-            <embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://newmanviktor.github.io/files/drawer.pdf" width="600" height="400">
+            <embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://newmanviktor.github.io/files/drawer2.pdf" width="600" height="440">
+            <embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://newmanviktor.github.io/files/drawer.pdf" width="600" height="440">
                 <br>
-            <embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://newmanviktor.github.io/files/cab2.pdf" width="600" height="400">
-            <embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://newmanviktor.github.io/files/drawer2.pdf" width="600" height="400">
+            <embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://newmanviktor.github.io/files/drawer3.pdf" width="600" height="675">
+            <embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://newmanviktor.github.io/files/cab.pdf" width="600" height="675">
+                <br>
+            <embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://newmanviktor.github.io/files/cab2.pdf" width="600" height="825">
+            <br><br><br><br>    
         </center>
+        <a href = "#nav" id="scrollToTop" class = "arrow">
+            <span><i class="fa fa-angle-double-up"></i></span>
+        </a>
     </body>
 </html>
