@@ -167,3 +167,14 @@ nav a:hover::before {
 	width: 100%;
 	color: white
 }
+
+#grey{
+    filter: brightness(0.75);
+    transition: all ease-in-out 0.4s;
+}
+
+#grey:hover{
+    filter: none;
+    transform: scale(1.1);
+    transition: all ease-in-out 0.4s;
+}
